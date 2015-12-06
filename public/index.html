@@ -1,11 +1,51 @@
+<!-- 
+	WHAT CAN BE DONE BETTER 
+	- actual views for the user input
+	- generate DOM for each method element based on code 
+-->
+
 <html>
 <head>
-	<title>EntryPoint Page</title>
+	<title>What's the deal with the Primes?!</title>
 	<meta charset="utf-8"/>
 	<link rel="stylesheet" type="text/css" href="resources/style.css">
 </head>
 <body>
-	<h1>Hello world</h1>
+	<head class="main">
+		<h1>Multiplication tables of prime numbers</h1>
+
+		<nav class="userInputElements">
+			<div class="wrappedElement">
+				<div class="element">
+					<label for="inputValue">number of primes:</label>
+					<input type="number" name="inputValue" id="userInput" value="" min="1"/>
+				</div>
+				<button>generate</button>
+			</div>
+
+			<div class="element">
+				<label>used method:</label>
+				<div class="wrapper">
+					<div class="methodElement">
+						<input type="radio" id="classicMethod" name="primeGroup" value="0" checked="checked">
+						<label for="classicMethod">"Classic" Method</label>
+					</div>
+					<div class="methodElement">
+						<input type="radio" id="eratosMethod"  name="primeGroup" value="1">
+						<label for="eratosMethod">Sieve of Eratosthenes</label>
+					</div>
+					<div class="methodElement">
+						<input type="radio" id="atkinMethod"  name="primeGroup" value="2">
+						<label for="atkinMethod">Sieve of Atkin</label>
+					</div>
+					<!-- more methods to be added here in the future / extensibility -->
+				</div>
+			</div>
+		</nav>
+	</head>
+	<section class="timeItTool">..how fast it rendered here</section>
+	<section class="renderer">rendered table here</section>
+	<footer>2015 &copy; Parnescu Adrian - Coding exercise for FindMyPast.com</footer>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

@@ -12,3 +12,5 @@ This will download all required dependencies, fire up a local node server and a 
 
 ## About
 Exercise was done using the TDD approach with no javascript frameworks, just plain old VanillaJs
+Additional tools like gulp, node and jasmine were necesary for ease of development and showing-off a bit, for the scope of this kind of exercise just a single html file with some in-line javascript would have sufficed
+Project was started by doodling a minimal UI on paper and researching prime numbers and how to generate them using https://en.wikipedia.org/wiki/Prime_number
