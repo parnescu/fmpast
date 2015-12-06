@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../src/test')));
+app.use(express.static(path.join(__dirname, '../src/main/javascript')));
 app.use(express.static(path.join(__dirname, '../node_modules/jasmine/node_modules/jasmine-core/lib')));
 
 
