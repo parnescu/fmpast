@@ -11,6 +11,21 @@ This will download all required dependencies, fire up a local node server and a 
 - the jasmine testing spec (http://localhost:3000/tests)
 
 ## About
-Exercise was done using the TDD approach with no javascript frameworks, just plain old VanillaJs
-Additional tools like gulp, node and jasmine were necesary for ease of development and showing-off a bit, for the scope of this kind of exercise just a single html file with some in-line javascript would have sufficed
-Project was started by doodling a minimal UI on paper and researching prime numbers and how to generate them using https://en.wikipedia.org/wiki/Prime_number
+Exercise was done using the TDD approach with no javascript frameworks, just plain old VanillaJs.
+
+Additional tools like gulp, node and jasmine were necesary for ease of development and "showing-off" a bit, for the scope of this kind of exercise just a single html file with some in-line javascript would have more than sufficed.
+
+Project was started by doodling a minimal UI on paper and researching prime numbers and how to generate them using https://en.wikipedia.org/wiki/Prime_number .
+
+
+There are things that CAN be done better
+
+- actual views for the user input
+- generate DOM for each actor element based on code not copy/pasted html
+- testing for given views
+- e2e testing with a scenario
+
+...but it kinda defeats the purpose of this test.
+
+There are things that I have ommited on purpose (semantic html, commas etc.) not by lack of knowledge, just because I tend to focus more on solving the problem not making it pretty and correct at first run, there's always a re-factoring step after coding.
+

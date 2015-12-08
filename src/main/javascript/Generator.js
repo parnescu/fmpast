@@ -1,7 +1,9 @@
 (function(){
 	"use strict"
-	
-	var fn = function(){
+	var fmp = window.fmp || {},
+	fn = function(data){
+		data = data || {};
+		this.generators_ = data.generators || []
 		this.usedMethod_ = 1;
 		this.methods_ = {
 			CLASSIC: 1,
@@ -19,25 +21,13 @@
 	}
 
 	fn.prototype.getPrimes_ = function(items){
-		
-		return null
+		return this.generator_ ? this.generator_.generate(items) : null;	
 	}
 	fn.prototype.getGeneratingMethod_ = function(numberOfItems){
 		return this.usedMethod_
 	}
 	fn.prototype.getGenerator_ = function(id){
-		return null
-		// todo: build generators
-		switch(id){
-			case 1:
-				return new ClassicGenerator()
-			case 2:
-				return new EratosGenerator()
-			case 3: 
-				return new AtkinGenerator()
-			default:
-				return this.generator_
-		}
+		return this.generators_[this.generators_.indexOf(id)-1]
 	}
 	fn.prototype.setGeneratingMethod_ = function(method){
 		if (!method){
@@ -60,5 +50,6 @@
 		return isValid
 	}
 
-	window.Generator = fn;
+	fmp.Generator = fn;
+	window.fmp = fmp;
 })()

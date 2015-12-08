@@ -1,11 +1,3 @@
-<!-- 
-	WHAT CAN BE DONE BETTER 
-	- actual views for the user input
-	- generate DOM for each method element based on code 
-	- testing for given views
-	- e2e testing with a scenario
--->
-
 <html>
 <head>
 	<title>What's the deal with the Primes?!</title>
@@ -13,10 +5,10 @@
 	<link rel="stylesheet" type="text/css" href="resources/style.css">
 </head>
 <body>
-	<head class="main">
+	<div class="main">
 		<h1>Multiplication tables of prime numbers</h1>
 
-		<nav class="userInputElements">
+		<div class="header userInputElements">
 			<div class="wrappedElement">
 				<div class="element">
 					<label for="inputValue">number of primes:</label>
@@ -43,11 +35,11 @@
 					<!-- more methods to be added here in the future / extensibility -->
 				</div>
 			</div>
-		</nav>
-	</head>
-	<section class="timeItTool">..how fast it rendered here</section>
-	<section class="renderer">rendered table here</section>
-	<footer>2015 &copy; Parnescu Adrian - Coding exercise for FindMyPast.com</footer>
+		</div>
+	</div>
+	<div class="timeItTool">..how fast it rendered here</div>
+	<div class="renderer">rendered table here</div>
+	<div class="footer">2015 &copy; Parnescu Adrian - Coding exercise for FindMyPast.com</div>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
