@@ -55,8 +55,9 @@
 		}
 		if (isValid){
 			this.usedMethod_ = method;
-			this.generator_ = this.sieves_[this.usedMethod_]	
+			this.generator_ = this.sieves_[this.usedMethod_];
 		}			
+
 		return isValid;
 	}
 	/**
