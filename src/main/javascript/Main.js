@@ -12,7 +12,11 @@
 	// setup generator and handlers
 	fmp.gInstance = new fmp.Generator({
 		usedMethod: 0,
-		sieveList: [fmp.actors.Classic, fmp.actors.Advanced, fmp.actors.Best]
+		sieveList: [
+			fmp.actors.Classic,
+			fmp.actors.Advanced,
+			fmp.actors.Best
+		]
 	});
 	fmp.handlers = {
 		onSieveChange: function(e){
@@ -24,19 +28,18 @@
 				return;
 			}
 
+			// get multiplication matrix by chaining generator's functions together and render it
+			fmp.gInstance.getMatrix(
+				fmp.gInstance.getPrimeNumbers(parseInt(fmp.UserInput.value))
+			);
 			
-			console.log("clean render")
-			console.log("generate primes for: "+ parseInt(fmp.UserInput.value)+" -> then multiplication matrix")
-			console.log("render matrix")
-			console.log("update time it took")
+			// update time it took
+			fmp.RenderTime.innerHTML = fmp.gInstance.getSieve().time+"ms";
 		}
 	}
 	Array.prototype.forEach.call(fmp.SieveItems, function(item){
 		item.addEventListener("change", fmp.handlers.onSieveChange);
 	});
 	fmp.UserButton.addEventListener("click", fmp.handlers.onButtonClick);
-
-
-	console.log(fmp);
 
 })();

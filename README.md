@@ -24,6 +24,7 @@ There are things that CAN be done better
 - generate DOM for each actor element based on code not copy/pasted html
 - testing for given views
 - e2e testing with a scenario
+- non-minimalistic design
 
 ...but it kinda defeats the purpose of this test.
 

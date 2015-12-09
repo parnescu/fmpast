@@ -11,14 +11,14 @@
 		<div class="header userInputElements">
 			<div class="wrappedElement">
 				<div class="element">
-					<label for="inputValue">number of primes:</label>
-					<input type="number" name="inputValue" id="userInput" value="1" min="1" max="50000"/>
+					<label for="inputValue">Number of items:</label>
+					<input type="number" name="inputValue" id="userInput" value="3" min="1" max="50000"/>
 				</div>
 				<button class="action">generate</button>
 			</div>
 
 			<div class="element">
-				<label>used method:</label>
+				<label class="fl">used method:</label>
 				<div class="wrapper">
 					<div class="methodElement">
 						<input type="radio" id="classicMethod" name="primeGroup" value="1" checked="checked">
@@ -36,10 +36,10 @@
 				</div>
 			</div>
 		</div>
+		<div class="renderer"></div>
+		<div class="timeItTook"></div>
+		<div class="footer">2015 &copy; Parnescu Adrian - Coding exercise for FindMyPast.com</div>
 	</div>
-	<div class="timeItTook">..how fast it generated primes in miliseconds</div>
-	<div class="renderer">rendered table here</div>
-	<div class="footer">2015 &copy; Parnescu Adrian - Coding exercise for FindMyPast.com</div>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

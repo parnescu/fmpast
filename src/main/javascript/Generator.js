@@ -22,9 +22,9 @@
 			method: this.methods_
 			,getSieve: this.getGenerator_.bind(this)
 			,getPrimeNumbers: this.getPrimes_.bind(this)
+			,getMatrix: this.getMultiplicationMatrix_.bind(this)
 			,setMethod: this.setGeneratingMethod_.bind(this)
 			,getMethod: this.getGeneratingMethod_.bind(this)
-
 		}
 	}
 
@@ -55,7 +55,7 @@
 		}
 		if (isValid){
 			this.usedMethod_ = method;
-			this.generator_ = this.sieves_[this.usedMethod_];
+			this.generator_ = this.sieves_[this.usedMethod_-1];
 		}			
 
 		return isValid;
@@ -66,6 +66,35 @@
 	*/
 	fn.prototype.getGenerator_ = function(){
 		return this.generator_;
+	}
+
+	/**
+		generate multiplication matrix
+		@param {Array<number>} primes
+		@return {Array<Array<number>>}
+	*/
+	fn.prototype.getMultiplicationMatrix_ = function(primes){
+		if (!primes || !primes.length){
+			return null;
+		}
+
+		var row = [0].concat(primes), i, j, matrix = [];
+		matrix.push(row);
+
+		// generate columns
+		row.map(function(element, index){ 
+			if (index>0){ 
+				matrix[0,index] = [element];
+			}
+		})
+
+		// generate rest of the matrix
+		for (i=1;i<row.length;i++){
+			for (j=1;j<row.length;j++){
+				matrix[j,i].push(row[i]*row[j]);
+			}
+		}
+		return matrix;
 	}
 
 	fmp.Generator = fn;

@@ -144,5 +144,16 @@ describe("Main test suite", function(){
 			expect(generator.getPrimeNumbers(100)).toEqual(prime100)
 			expect(generator.getPrimeNumbers(168)).toEqual(prime168)
 		})
+
+		it("can generate mutliplication matrix", function(){
+			expect(generator.getMatrix).toBeDefined()
+			expect(generator.getMatrix()).toBeNull()
+			expect(generator.getMatrix(NaN)).toBeNull()
+			expect(generator.getMatrix([])).toBeNull()
+
+			expect(generator.getMatrix(prime1)).toEqual([[0,2],[2,4]])
+			expect(generator.getMatrix(prime2)).toEqual([[0,2,3],[2,4,6],[3,6,9]])
+			expect(generator.getMatrix(prime2)).toEqual([[0,2,3],[2,4,6],[3,6,9]])
+		});
 	})
 })
