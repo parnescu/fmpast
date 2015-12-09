@@ -1,5 +1,6 @@
 (function(){
 	"use strict"
+	
 	var fmp = window.fmp || {};
 	fmp.actors = fmp.actors || {};
 
@@ -8,7 +9,7 @@
 		@param id {number}
 	*/
 	var fn = function(id){
-		BaseActor.call(this, id)
+		fmp.actors.BaseActor.call(this, id)
 		
 		return {
 			id: this.id_
@@ -17,7 +18,7 @@
 			,time: this.timeItTookToGenerate_
 		}
 	}
-	fn.prototype = Object.create(BaseActor.prototype)
+	fn.prototype = Object.create(fmp.actors.BaseActor.prototype)
 
 	/**
 		Basic method that checks if a number is prime
@@ -63,4 +64,4 @@
 
 	fmp.actors.Classic = new fn(1);
 	window.fmp = fmp;
-})()
+})();

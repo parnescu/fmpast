@@ -11,17 +11,15 @@ var argz = require('yargs').argv;
 gulp.task("default", ["sass"], function(){
 	var compileLeveL = argz.p && argz.p === true ? "ADVANCED_OPTIMIZATIONS" : "SIMPLE_OPTIMIZATIONS";
 
-	gulp.src("src/main/**/*.js")
-		.pipe(closure({
-			compilerPath: 'node_modules/google-closure-compiler/compiler.jar',
-			fileName: 'main.js',
-			compilerFlags:{
-				compilation_level: compileLeveL
-			},
-			externs: [
-			]
-		}))
-		.pipe(gulp.dest('public/js'))
+	
+	gulp.src([
+		"src/main/javascript/actors/_Base.js",
+		"src/main/javascript/actors/*.js",
+		"src/main/javascript/Generator.js",
+		"src/main/javascript/Main.js"
+	])
+	.pipe(concat('main.js'))
+	.pipe(gulp.dest('public/js'))
 });
 
 gulp.task("watch", function(){

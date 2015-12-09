@@ -1,5 +1,8 @@
 (function(){
 	"use strict"
+	
+	var fmp = window.fmp || {};
+	fmp.actors = fmp.actors || {};
 
 	/**
 		Base class for all our generator actors
@@ -21,5 +24,6 @@
 		return null;
 	}
 	
-	window.BaseActor = fn;
-})()
+	fmp.actors.BaseActor = fn;
+	window.fmp = fmp;
+})();

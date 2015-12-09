@@ -52,7 +52,7 @@ describe("Main test suite", function(){
 				expect(sieve.id).toBeDefined()
 				expect(sieve.id).toEqual(2)
 			})
-			xit("can generate prime numbers", function(){
+			it("can generate prime numbers", function(){
 				expect(sieve.generate).toBeDefined()
 
 				expect(sieve.generate(1)).toEqual(prime1)
@@ -90,7 +90,10 @@ describe("Main test suite", function(){
 
 	describe("Number Generator class", function(){
 		beforeEach(function(){
-			generator = new fmp.Generator()
+			generator = new fmp.Generator({
+				usedMethod: 0,
+				sieveList: [fmp.actors.Classic, fmp.actors.Advanced, fmp.actors.Best]
+			})
 		})
 		it("is available", function(){
 			expect(generator).toBeDefined()
@@ -129,7 +132,7 @@ describe("Main test suite", function(){
 
 		})
 
-		xit("can generate prime numbers", function(){
+		it("can generate prime numbers", function(){
 			expect(generator.getPrimeNumbers).toBeDefined()
 			expect(generator.getPrimeNumbers()).toBeNull()
 			expect(generator.getPrimeNumbers(NaN)).toBeNull()
