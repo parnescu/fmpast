@@ -18,17 +18,15 @@ Additional tools like gulp, node and jasmine were necesary for ease of developme
 Project was started by doodling a minimal UI on paper and researching prime numbers and how to generate them using https://en.wikipedia.org/wiki/Prime_number .
 
 
-There are things that CAN be done better
+There are things that CAN be done better (which I am not really happy with right now)
 
 - actual views for the user input
 - generate DOM for each actor element based on code not copy/pasted html
 - testing for given views
-- e2e testing with a scenario
+- e2e testing with a scenario 
 - non-minimalistic design
 - non-minimalistic renderer
 - rendering performance
-
-...but it kinda defeats the purpose of this test.
 
 There are things that I have ommited on purpose (semantic html, commas etc.) not by lack of knowledge, just because I tend to focus more on solving the problem not making it pretty and correct at first run, there's always a re-factoring step after coding.
 

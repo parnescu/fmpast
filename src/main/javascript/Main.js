@@ -45,7 +45,7 @@
 			// get multiplication matrix by chaining generator's functions together and render it...
 			// as a best practice this function should respect the S from SOLID principle and 
 			// should trigger an event and the renderer would do the "heavy lifting"
-			// but since we don't have a renderer, for our purposes this is fine :)
+			// but since we don't have a renderer, we'll just call a function with the given value
 			var solution = fmp.matrixRenderer(fmp.gInstance.getMatrix(
 				fmp.gInstance.getPrimeNumbers(parseInt(fmp.UserInput.value))
 			));
@@ -61,7 +61,7 @@
 		item.addEventListener("change", fmp.handlers.onSieveChange);
 	});
 
-	
+
 	fmp.UserButton.addEventListener("click", fmp.handlers.onValueChange);
 	fmp.UserInput.addEventListener("change", fmp.handlers.onValueChange);
 })();
