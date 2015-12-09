@@ -25,6 +25,8 @@ There are things that CAN be done better
 - testing for given views
 - e2e testing with a scenario
 - non-minimalistic design
+- non-minimalistic renderer
+- rendering performance
 
 ...but it kinda defeats the purpose of this test.
 
